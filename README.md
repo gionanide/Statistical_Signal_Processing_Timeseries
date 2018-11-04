@@ -2,5 +2,6 @@
 
 Graduate course of Aristotle University of Thessaloniki.
 
-
-Solutions of the book SPECTRAL ANALYSIS OF SIGNALS.
+Power Spectral Density estimation
+Information Theory
+Hypothesis Testing
