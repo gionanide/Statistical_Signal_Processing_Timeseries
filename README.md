@@ -3,5 +3,8 @@
 Graduate course of Aristotle University of Thessaloniki.
 
 Power Spectral Density estimation
+
 Information Theory
+
 Hypothesis Testing
+
