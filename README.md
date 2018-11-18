@@ -1,6 +1,6 @@
 # Statistical_Signal_Processing_Timeseries
 
-Graduate course of Aristotle University of Thessaloniki.
+Postgraduate course of Aristotle University of Thessaloniki.
 
 Power Spectral Density estimation
 
