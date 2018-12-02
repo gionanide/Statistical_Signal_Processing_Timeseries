@@ -2,9 +2,11 @@
 
 Postgraduate course of Aristotle University of Thessaloniki.
 
-Power Spectral Density estimation
+Book followed SPECTRAL ANALYSIS OF SIGNALS, Petre Stoica and Randolph Moses.
 
-Information Theory
+Power Spectral Density estimation.
 
-Hypothesis Testing
+Information Theory.
+
+Hypothesis Testing.
 
