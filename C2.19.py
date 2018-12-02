@@ -75,7 +75,7 @@ def main():
 	print len(signal1)
 	
 	#calculate psd
-	print 'PSD without padding N:', (np.real(sum(psd1)/len(psd1)))
+	print 'PSD with padding N:', (np.real(sum(psd1)/len(psd1)))
 
 	signal2 = zeroPadding(signal,3*N)
 	psd2 = np.fft.fft(signal2)
@@ -83,7 +83,7 @@ def main():
 	print len(signal2)
 
 	#calculate psd
-	print 'PSD without padding 3N:', (np.real(sum(psd2)/len(psd2)))
+	print 'PSD with padding 3N:', (np.real(sum(psd2)/len(psd2)))
 
 	signal3 = zeroPadding(signal,5*N)
 	psd3 = np.fft.fft(signal3)
@@ -91,7 +91,7 @@ def main():
 	print len(signal3)
 
 	#calculate psd
-	print 'PSD without padding 5N:', (np.real(sum(psd3)/len(psd3)))
+	print 'PSD with padding 5N:', (np.real(sum(psd3)/len(psd3)))
 
 	signal4 = zeroPadding(signal,7*N)
 	psd4 = np.fft.fft(signal4)
@@ -99,7 +99,7 @@ def main():
 	print len(signal4)
 
 	#calculate psd
-	print 'PSD without padding 7N:', (np.real(sum(psd4)/len(psd4)))
+	print 'PSD with padding 7N:', (np.real(sum(psd4)/len(psd4)))
 	
 
 	#plots
