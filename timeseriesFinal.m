@@ -48,6 +48,7 @@ ground_truth_summer = -min_peaks(1)
 
 %plots
 figure(1)
+subplot(2,1,1)
 %yline(y_min)
 plot(temperature_with_trend)
 hlinew = refline([0 ground_truth_winter])
@@ -65,15 +66,34 @@ legend('See ice','Maximum Winter value','Lower wrinter value','Winter-peaks','Su
 xlabel('Years')
 ylabel('Sea Ice Extend[10^6 km^2]') 
 title('Artic Sea Extend 1972-2019/2/13')
+subplot(2,1,2)
+plot(detrend(temperature_with_trend))
+yticklabels({'0','2','4','8','10','12','14','16','16','18','20'})
+xticklabels({'1970','1975','1980','1985','1990','1995','2000','2005','2015','2025'})
+grid on
+grid minor
+legend('See ice','Maximum Winter value','Lower wrinter value','Winter-peaks','Summer-peaks')
+xlabel('Years')
+ylabel('Sea Ice Extend[10^6 km^2]') 
+title('Artic Sea Extend 1972-2019/2/13 data without trend')
 
 %%
 %Periodogram
+
+%determine the length of zero padding
+zero_padding = zero_padding_length*length(temperature_with_trend);
+
+%here we are trying the increase the resolution using the Zero padding
+%technique, we add N zeros (where N is the length of out timeserie) in the
+%end of our timeserie
+tempreature_zeropadding = [temperature_with_trend; zeros(zero_padding,1)];
+
 %We start our approach for finding the periodicity of the data with the non
 %parametric techniques, in specific with the Periodogram
-phi = periodogram(temperature_with_trend);
+phi = periodogram(tempreature_zeropadding);
 
 %windowed periodogram using hamming window
-phi_w = periodogram(detrend(temperature_with_trend),hamming(length(temperature_with_trend)));
+phi_w = periodogram(detrend(tempreature_zeropadding),hamming(length(temperature_with_trend)));
 
 figure(2)
 subplot(2,1,1)
